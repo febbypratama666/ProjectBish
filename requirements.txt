@@ -59,3 +59,4 @@ validators
 glitch_this
 lottie
 cairosvg
+vcsi
