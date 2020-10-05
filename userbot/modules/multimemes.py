@@ -131,8 +131,7 @@ async def glitch(event):
         )
     )
     os.remove(glitch_file)
-    os.system("rm -rf *.tgs")
-    os.system("rm -rf *.mp4")
+    os.system("rm *.tgs *.mp4")
 
 
 @register(outgoing=True, pattern=r"^\.mmf(?: |$)(.*)")
@@ -185,9 +184,7 @@ async def mim(event):
         event.chat_id, webp_file, reply_to=event.reply_to_msg_id
     )
     await event.delete()
-    os.system("rm -rf *.tgs")
-    os.system("rm -rf *.mp4")
-    os.system("rm -rf *.png")
+    os.system("rm *.tgs *.mp4 *.png")
     os.remove(webp_file)
 
 
