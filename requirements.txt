@@ -60,3 +60,4 @@ glitch_this
 lottie
 cairosvg
 vcsi
+colour
