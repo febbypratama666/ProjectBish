@@ -28,12 +28,17 @@ async def ssvideo(framecap):
             return await framecap.edit("`hey..dont put that much`")
     except BaseException:
         return await framecap.edit("`Please input number of frame!`")
-    if (reply_message.photo
-            or (DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
-                in reply_message.media.document.attributes)
-            or (DocumentAttributeFilename(file_name="sticker.webp")
-                in reply_message.media.document.attributes)
-            ):
+    if (
+        reply_message.photo
+        or (
+            DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
+            in reply_message.media.document.attributes
+        )
+        or (
+            DocumentAttributeFilename(file_name="sticker.webp")
+            in reply_message.media.document.attributes
+        )
+    ):
         return await framecap.edit("`Unsupported files!`")
     c_time = time.time()
     await framecap.edit("`Downloading media...`")
